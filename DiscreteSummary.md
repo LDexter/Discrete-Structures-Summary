@@ -798,3 +798,11 @@ $$
 - $\textbf{Contradictions: } \quad$ always $F\\[1em]$
 - $\textbf{Contingent formulas: } \quad T$ OR $F$ depending on variables $\\[1em]$
 - $\textbf{Satisfiable formulas: } \quad \textit{tautologies}$ OR $\textit{contingent formulas}\\[1em]$
+
+## $\color{steelblue}\text{Logical Equivalence}$
+
+$$
+   A \rarr B \equiv \lnot A \vee B
+$$
+
+$$A \equiv B\ \text{ is the same as stating: \textquotedblleft} A \harr B\ \text{ is a \textit{tautology}"}$$
