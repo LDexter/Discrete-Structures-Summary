@@ -159,12 +159,12 @@ This is frequently used to determine divisibility or test if a number is even wh
 
 ### $\color{teal}\text{Exponents in Computer Science}$
 
-- $\textbf{kilo: }\quad 2^{10}$
-- $\textbf{mega: }\quad 2^{20} = (2^{10})^2$
-- $\textbf{giga: }\quad 2^{30} = (2^{10})^3$
-- $\textbf{tera: }\quad 2^{40} = (2^{10})^4$
-- $\textbf{peta: }\quad 2^{50} = (2^{10})^5$
-- $\textbf{exa: }\quad 2^{60} = (2^{10})^6$
+- $\textbf{kilo: }\quad 2^{10}\\[1em]$
+- $\textbf{mega: }\quad 2^{20} = (2^{10})^2\\[1em]$
+- $\textbf{giga: }\quad 2^{30} = (2^{10})^3\\[1em]$
+- $\textbf{tera: }\quad 2^{40} = (2^{10})^4\\[1em]$
+- $\textbf{peta: }\quad 2^{50} = (2^{10})^5\\[1em]$
+- $\textbf{exa: }\quad 2^{60} = (2^{10})^6\\[1em]$
 
 For example, one kilobit is $1024 = 2^{10}$ bits.
 
@@ -464,10 +464,12 @@ $$
 Adding two 1-bit numbers:
 
 $$
-0+0=0 \\
-1+0=1 \\
-0+1=1 \\
-1+1=10
+\begin{align}
+0+0&=0 \\
+1+0&=1 \\
+0+1&=1 \\
+1+1&=10
+\end{align}
 $$
 
 ### $\color{teal}\text{Bit Operations}$
@@ -475,16 +477,20 @@ $$
 Given two 1-bit numbers, $\overline{x}$ and $\overline{y}$, their binary sum is a 2-bit string $\overline{z}$ where:
 
 $$
-\overline{z}_0 = \overline{x}_0 \wedge \overline{y}_0 \\[1em]
-\overline{z}_1 = \overline{x}_0 \And \overline{y}_0
+\begin{align}
+   \overline{z}_0 &= \overline{x}_0 \wedge \overline{y}_0 \\[1em]
+   \overline{z}_1 &= \overline{x}_0 \And \overline{y}_0
+\end{align}
 $$
 
 For $n$-bit binary numbers $\overline{x}$ and $\overline{y}$, the sum in binary $\overline{z}$ is a $n+1$-bit binary number where:
 
 $$
-\overline{z}_j = \overline{x}_j \wedge \overline{y}_j \wedge \overline{c}_j
-\\[1em]
-\overline{c}_{j+1} = (\overline{x}_j \And \overline{y}_j) \mid (\overline{x}_j \And \overline{c}_j) \mid (\overline{y}_j \And \overline{c}_j)
+\begin{align}
+   \overline{z}_j &= \overline{x}_j \wedge \overline{y}_j \wedge \overline{c}_j
+   \\[1em]
+   \overline{c}_{j+1} &= (\overline{x}_j \And \overline{y}_j) \mid (\overline{x}_j \And \overline{c}_j) \mid (\overline{y}_j \And \overline{c}_j)
+\end{align}
 $$
 
 The string $\overline{c}$ is the carry bits (take $\overline{c}_0$ to be $0$). The equation for $\overline{c}_{j+1}$ says it is 1 when $\overline{x}_j + \overline{y}_j + \overline{c}_j$ is 2 or 3.
@@ -553,8 +559,9 @@ $$
 
 ### $\color{teal}\text{Interpreting Hex}$
 
-$\sf4F = 4 \rarr \tt0100,\ \sf F \rarr \tt1111 = 01001111$
-$\text{therefore,}$
+$\text{given:}$
+$\sf4F = 4 \rarr \tt0100\; \text{ and }\; \sf F \rarr \tt1111 = 01001111$
+$\\[1em]\text{then:}$
 $\sf4F = \tt01001111$
 
 - Shorter than bit strings
@@ -679,15 +686,17 @@ def F(n):
 Programming languages often expressed as multiple types in recursion:
 
 $$
-EXPR := \begin{cases}
-   VALUE\\
-   EXPR\; \text{\textquotedblleft}+"\ VALUE\\
-   EXPR\; \text{\textquotedblleft}-"\ VALUE
-\end{cases}\\[1em]
-VALUE := \begin{cases}
-   CONSTANT\\
-   VARIABLE
-\end{cases}
+\begin{align}
+   EXPR &:= \begin{cases}
+      VALUE\\
+      EXPR\; \text{\textquotedblleft}+"\ VALUE\\
+      EXPR\; \text{\textquotedblleft}-"\ VALUE
+   \end{cases}\\[1em]
+   VALUE &:= \begin{cases}
+      CONSTANT\\
+      VARIABLE
+   \end{cases}
+\end{align}
 $$
 
 ## $\color{steelblue}\text{Propositional Logic}$
@@ -747,4 +756,38 @@ $$
    \hdashline
    F & F & T
 \end{array}
+$$
+
+## $\color{steelblue}\text{Formulas}$
+
+$\textit{Boolean formulas}$ are strings of symbols to build compond propositions.
+
+$\textbf{Formula rules (listed by precedence):}$
+
+- $T$, $F$ and lower case letters are all formulas
+- If $A$ and $B$ are formulas then so are:
+  - $(A)$
+  - $\lnot A$
+  - $A \oplus B$
+  - $A \wedge B$
+  - $A \vee B$
+  - $A \rarr B$
+  - $A \harr B$
+- No other strings are formulas
+
+### $\color{teal}\text{Formula Truth Value}$
+
+- Fill in truth table
+- Evaluate logical connectives from innermost parentheses outwards
+
+When $p = T$ and $q = F$:
+
+$$
+\begin{equation}
+\begin{split}(p\vee q)\rarr (q\oplus p)
+   &=(T\vee F) \rarr (F\oplus T)\\
+   &=T\rarr T\\
+   &=T
+\end{split}
+\end{equation}
 $$
