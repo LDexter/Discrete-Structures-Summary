@@ -806,3 +806,14 @@ $$
 $$
 
 $$A \equiv B\ \text{ is the same as stating: \textquotedblleft} A \harr B\ \text{ is a \textit{tautology}"}$$
+
+$$
+\begin{equation}
+\begin{split}A\rarr B
+   &\equiv \lnot A\wedge B\\
+   &\equiv B\wedge \lnot A\\
+   &\equiv \lnot(\lnot B)\wedge \lnot A\\
+   &\equiv \lnot B \rarr \lnot A
+\end{split}
+\end{equation}
+$$
