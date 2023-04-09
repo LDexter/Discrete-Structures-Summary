@@ -1,0 +1,750 @@
+# $\color{dodgerblue}\text{CAB203: Discrete Structures Summary}$
+
+$\textit{Author not responsible for consequences caused by any innacuracies.}$
+
+## $\color{steelblue}\text{Markdown Setup}$
+
+Open in Visual Studio Code and install Markdown Preview Enhanced:
+https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced
+
+## $\color{steelblue}\text{Typesetting Powered by} \thickspace \KaTeX$
+
+$\KaTeX$ documentation: https://katex.org/
+which uses $\LaTeX\textit{-like}$ syntax to display mathematical syxbols
+
+## $\color{steelblue}\text{Axioms}$
+
+### $\color{teal}\text{Natural Numbers}$
+
+$\text{If } x, y \text{ and } z \text{ are natural numbers:}\\[1em]$
+
+1. $0 \text{ is a natural number} \\[1em]$
+
+2. $x = x \\[1em]$
+
+3. $\text{if } x = y \text{ then } y = x \\[1em]$
+
+4. $\text{if } x = y \text{ and } y = z \text{ then } x = z \\[1em]$
+
+5. $\text{if } x = w \text{ then } w \text{ is a natural number} \\[1em]$
+
+6. $S(y) \text{ is a natural number} \\[1em]$
+
+7. $S(x) = S(y) \text{ then } x = y \\[1em]$
+
+8. $S(x) = 0 \text{ is always false}\\[1em]$
+
+### $\color{teal}\text{Other Axioms}$
+
+WIP
+
+## $\color{steelblue}\text{Equivalence}$
+
+- $\textbf{Equals: } \quad =$
+- $\textbf{Greater than: } \quad >$
+- $\textbf{Greater than or equal to: } \quad \ge$
+- $\textbf{Less than: } \quad <$
+- $\textbf{Less than or equal to: } \quad \le$
+- $\textbf{Not equal to: } \quad \not =$
+
+## $\color{steelblue}\text{Division}$
+
+- $a\mid b$
+
+- $a \text{ divides } b$
+
+- $b \text{ is divisible by } a$
+
+- $\text{there exists some integer } c \text{ such that } ac = b$
+
+## $\color{steelblue}\text{Definitions}$
+
+May either replace term with its definition, or replace definition with its term:
+
+- $\text{the term } 2 \cdot 3 = 6 \text{ may be replaced by } 2\mid6 \text{, while } 3 \text{ becomes } c \\[1em]$
+
+- $\text{the definition } 2\mid6 \text{ may be replaced with "there is some integer } c \text{ such that } 2c = 6 \text{"}$
+
+## $\color{steelblue}\text{Parity}$
+
+Integers have one of two $\textit{parities:}$
+
+- $x \text{ is \textit{even} means } 2\mid x$
+- $x \text{ is \textit{odd} means } 2\mid(x-1)$
+
+Properties:
+
+- $\text{even} \pm \text{even} = \text{even}$
+- $\text{even} \pm \text{odd} = \text{odd}$
+- $\text{odd} \pm \text{odd} = \text{even}$
+
+Therefore, two numbers have same parity if difference is even.
+
+## $\color{steelblue}\text{Clock Arithmetic}$
+
+- $10\ o'clock + 5h = 3\ o'clock$
+- $\text{the } o'clock \text{ remains unaffected by multiples of } 12h$
+
+## $\color{steelblue}\text{Modular Arithmetic}$
+
+$\textit{Modular arithmetic}$ is an abstraction of parity and clock arithmetic.
+
+- $\text{parity is } arithmetic\mod 2$
+- $\text{clocks use } arithmetic\mod 12$
+- $\text{generally, can have } arithmetic\mod n \text{ for any positive integer } n$
+
+Modular arithmetic extends upon integers by adding a new relation (modular equivalence)
+
+### $\color{teal}\text{Modular Equivalence}$
+
+Modular arithmetic works by replacing equality with $\textit{modular equivalence}$, also called $\textit{modular congruence}$:
+
+$\text{if } n\mid(a-b) \text{, then } a \text{ and } b \text{ are \textit{equivalent modulo n}, such that } a \equiv b\quad (\bmod\ n)$
+
+$\text{if } a \equiv b\ (\bmod\ n) \text{ and } c \equiv\ d\ (\bmod\ n) \text{, then:}$
+
+- $a + c \equiv b + d$
+- $a - c \equiv b-d\quad (\bmod\ n)$
+- $ac \equiv\ bd\quad (\bmod\ n)$
+
+### $\color{teal}\text{Mod Operator}$
+
+$a \bmod n \text{ is the smallest non-negative } b \text{ such that }\quad a \equiv b\quad (\bmod\ n)$
+
+- $\text{Equivalently, } a \mod n \text{ is the remainder from } \dfrac{a}{n}$
+- $example: 17 \mod 4 = 1 \text{ because } 17 = 4(4)+1$
+
+Python:
+
+```python
+print(17 % 4) # Prints 1 to the console
+```
+
+### $\color{teal}\text{Modulo Lemma}$
+
+A $\textit{lemma}$ is a short statement that is true in mathematical theory, derived from its axioms. We can show that it is true by using a $\textit{proof}$ that shows the steps from the axioms to the statement. Other axioms with existing proofs may be used in the proof.
+
+### $\color{teal}\text{Proof of Lemma}$
+
+$$
+\text{Let integers } a \text{ and } b \text{ be given such that } a \mod b = 0 \text{.} \\
+\text{Then from the definition of the mod operator:}
+\\[1em]
+a \equiv 0\quad (\bmod\ b)
+\\[1em]
+\text{From the definiton of modular equivalence:}
+\\[1em]
+b\mid(a-0)
+\\[1em]
+\text{From a well known lemma observe that } a-0=a \text{ for any integer, so } b\mid a \text{.}
+$$
+
+This is frequently used to determine divisibility or test if a number is even when programming.
+
+## $\color{steelblue}\text{Exponents}$
+
+- $a^2 \text{ means } a \cdot a \cdot a$
+- $a^n \text{ means multiply } a \text{ together } n \text{ times}$
+- $a \text{ is called the base}$
+- $b \text{ is called the exponent}$
+
+### $\color{teal}\text{Laws of Exponents}$
+
+- $(ab)^n = a^n \cdot b^n \\[1em]$
+- $a^m \cdot a^n = a^{m+n} \\[1em]$
+- $a^{m-n} = \dfrac{a^m}{a^n}\quad (\text{when } a \not= 0) \\[1em]$
+- $a^{-n} = \dfrac{1}{a^n}\quad (\text{when } a \not= 0) \\[1em]$
+- $a^0 = 1$
+- $(a^m) = a^{m \cdot n}$
+
+### $\color{teal}\text{Exponents in Computer Science}$
+
+- $\textbf{kilo: }\quad 2^{10}$
+- $\textbf{mega: }\quad 2^{20} = (2^{10})^2$
+- $\textbf{giga: }\quad 2^{30} = (2^{10})^3$
+- $\textbf{tera: }\quad 2^{40} = (2^{10})^4$
+- $\textbf{peta: }\quad 2^{50} = (2^{10})^5$
+- $\textbf{exa: }\quad 2^{60} = (2^{10})^6$
+
+For example, one kilobit is $1024 = 2^{10}$ bits.
+
+- $2^3 = 8 \text{ bits in a byte}\\[1em]$
+- $2^{10} = 1024 \text{ bytes in a kilobyte}\\[1em]$
+- $2^{10} \cdot 2^3 = 2^{10+3} \text{ bits in a kilobyte}\\[1em]$
+- $32 = 5^2 \text{ or } 64 = 2 \text{ bit processors}\\[1em]$
+- $256 = 2^8 = 2^{2^3} \text{ possible 8-bit characters}\\[1em]$
+
+## $\color{steelblue}\text{Logarithms}$
+
+- $\text{logarithms are the \textit{inverse} of exponents}$
+- $\text{if } n=\log_a x \text{ then } a^n = x$
+- $\text{so } \log_a \text{ tells what exponent is needed to make } x \text{ from } a:$
+  $$a^{\log_a x} = x$$
+
+### $\color{teal}\text{Laws of Logarithms}$
+
+- $\log_a 1 = 0 \\[1em]$
+- $\log_a a = 1 \\[1em]$
+- $\log_a (x \cdot y) = \log_a x + \log_a y \\[1em]$
+- $\log_a x^y = y \log_a x \\[1em]$
+- $\log_a \dfrac{1}{y} = - \log_a y \\[1em]$
+- $\log_a \dfrac{x}{y} \\[1em]$
+- $\log_b x = (\log_b a) \cdot \log_a x \\[1em]$
+
+### $\color{teal}\text{Base Transformation Law}$
+
+- $\log_a x = \dfrac{\log_b x}{\log_b a}$
+- $\text{use base transformation to calculate } \log_2 \text{, etc...}$
+
+### $\color{teal}\text{Ceiling and Floor}$
+
+- $\textbf{Ceiling, round up:} \quad \lceil a \rceil \text{ is the next integer above } a \\[1em]$
+- $\textbf{Floor, round down:} \quad \lfloor a \rfloor \text{ is the next integer below } a \\[1em]$
+- $\lceil \log_2 5000 \rceil = 13 \text{ address lines}$
+
+### $\color{teal}\text{Exponent and Logs in Python}$
+
+```python
+>>> import math         # Must import math library
+>>> math.log2(8)        # log2 means log base 2 and returns a float (decimal)
+3.0
+>>> 2 ** 3              # ** is exponentiation
+8
+>>> math.log2(100) / math.log2(10)  # base transformation
+2.0
+```
+
+## $\color{steelblue}\text{Operators}$
+
+An operator is a mathematical object that transforms other objects:
+
+- $+$ is a binary operator (transforms two objects, ie: $1+2$ into $3$ )
+- $-$ combines two operators
+  - As a binary operator: $1-2$
+  - As a unary operator: $-1$ (negative number)
+
+## $\color{steelblue}\text{Bits}$
+
+### $\color{teal}\text{Bit String Notation}$
+
+- $\textbf{String: } \quad \overline{x} \\[1em]$
+- The set of all strings of length $n$ (aka $n$-bit strings) is: $\quad \lbrace 0,1 \rbrace \\[1em]$
+- All bit strings of all length are members of: $\quad \lbrace 0,1 \rbrace^* \\[1em]$
+- The $j$th bit in $\overline{x}$ is: $\quad \overline{x}_j \quad$ ($j$ goes from $0$ to $n - 1$) $ \\[1em]$
+- Bit strings are most often counted from the $\textit{right}$, so the furthes right is: $\quad \overline{x}_0 \\[1em]$
+- $2^n$ possible bit strings of length $n \\[1em]$
+
+### $\color{teal}\text{Bit Operations}$
+
+Two types of bit operations:
+
+- Operations on a single bit or pairs of bits
+- operations on bit strings
+
+### $\color{teal}\text{NOT}$
+
+NOT, aka $\textit{bit flip}: \quad 0$ becomes $1$ and vice versa.
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c:c}
+   x & \text{\large\textasciitilde}x \\ \hline
+   0 & 1 \\
+   \hdashline
+   1 & 0
+\end{array}
+$$
+
+### $\color{teal}\text{AND}$
+
+AND is similar to multiplication.
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c:c:c}
+   x & y & x \And y \\ \hline
+   0 & 0 & 0 \\
+   \hdashline
+   0 & 1 & 0 \\
+   \hdashline
+   1 & 0 & 0 \\
+   \hdashline
+   1 & 1 & 1
+\end{array}
+$$
+
+### $\color{teal}\text{OR}$
+
+OR is similar to addition, yet $2$ is condensed to $1$.
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c:c:c}
+   x & y & x \mid y \\ \hline
+   0 & 0 & 0 \\
+   \hdashline
+   0 & 1 & 1 \\
+   \hdashline
+   1 & 0 & 1 \\
+   \hdashline
+   1 & 1 & 1
+\end{array}
+$$
+
+### $\color{teal}\text{XOR}$
+
+XOR is also similar to addition, yet $2$ is now condensed to $0$, like parity.
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c:c:c}
+   x & y & x \wedge y \\ \hline
+   0 & 0 & 0 \\
+   \hdashline
+   0 & 1 & 1 \\
+   \hdashline
+   1 & 0 & 1 \\
+   \hdashline
+   1 & 1 & 0
+\end{array}
+$$
+
+### $\color{teal}\text{Bitwise Operations}$
+
+Bit operations may be applied bitwise to strings of the same length.
+$\\[1em] \text{if }\overline{x} \And \overline{y} \text{ then}$
+$$\overline{z}_j = \overline{x}_j \And \overline{y}_j$$
+
+Operations are performed on pairs of bits.
+
+### $\color{teal}\text{Concatonation}$
+
+$\text{if } \overline{x} \text{ is an \textit{n}-bit string and } \overline{y} \text{ is a \textit{m}-bit string, then } \overline{z} = \overline{xy} \text{ is a } (n+m)\text{-bit string}$
+
+### $\color{teal}\text{Lexicographic Ordering}$
+
+- $0$ before $1$
+- Compare strings one bit at a time, left to right
+- At first bit where strings differ, 0 goes first
+- Shorter strings are padded with empty spaces
+
+## $\color{steelblue}\text{ASCII}$
+
+- 7 bit strings
+- 128 characters
+- Upper, lower case Latin chars, numbers, punctuation, maths symbols, space, newline, etc
+- Special characters BEL, ESC, NUL, etc
+- Relational blocks
+- Upper vs lower is just one bit
+- Letters and numbers ordered lexicographically
+
+### $\color{teal}\text{USASCII Code Chart}$
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c|c|c|c|c||c:c:c:c:c:c:c:c}
+   b_7 \substack{\rarr} & b_6 \substack{\rarr} & b_5 \substack{\rarr} & \Longrightarrow & \Longrightarrow & \tt000 & \tt001 & \tt010 & \tt011 & \tt100 & \tt101 & \tt110 & \tt111 \\ \hline
+   b_4 \substack{\darr} & b_3 \substack{\darr} & b_2 \substack{\darr} & b_1 \substack{\darr} & r\substack\darr c\substack\rarr & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+   \hline
+   \hline
+   \tt0 & \tt0 & \tt0 & \tt0 & 0 & \tt NUL & \tt DLE & \tt SP & 0 & @ & \sf P & ` & \sf p \\
+   \hdashline
+   \tt0 & \tt0 & \tt0 & \tt1 & 1 & \tt SOH & \tt DC1 & ! & 1 & \sf A & \sf Q & \sf a & \sf q \\
+   \hdashline
+   \tt0 & \tt0 & \tt1 & \tt0 & 2 & \tt STX & \tt DC2 & " & 2 & \sf B & \sf R & \sf b & \sf r \\
+   \hdashline
+   \tt0 & \tt0 & \tt1 & \tt1 & 3 & \tt ETX & \tt DC3 & \sf \# & 3 & \sf C & \sf S & \sf c & \sf s \\
+   \hdashline
+   \tt0 & \tt1 & \tt0 & \tt0 & 4 & \tt EOT & \tt DC4 & \$ & 4 & \sf E & \sf T & \sf d & \sf t \\
+   \hdashline
+   \tt0 & \tt1 & \tt0 & \tt1 & 5 & \tt ENQ & \tt NAK & \% & 5 & \sf F & \sf U & \sf e & \sf u \\
+   \hdashline
+   \tt0 & \tt1 & \tt1 & \tt0 & 6 & \tt ACK & \tt SYN & \& & 6 & \sf G & \sf V & \sf f & \sf v \\
+   \hdashline
+   \tt0 & \tt1 & \tt1 & \tt1 & 7 & \tt BEL & \tt ETB & ' & 7 & \sf H & \sf W & \sf g & \sf w \\
+   \hdashline
+   \tt1 & \tt0 & \tt0 & \tt0 & 8 & \tt BS & \tt CAN & ( & 8 & \sf I & \sf X & \sf h & \sf x \\
+   \hdashline
+   \tt1 & \tt0 & \tt0 & \tt1 & 9 & \tt HT & \tt EM & ) & 9 & \sf J & \sf Y & \sf i & \sf y \\
+   \hdashline
+   \tt1 & \tt0 & \tt1 & \tt0 & 10 & \tt LF & \tt SUB & * & : & \sf K & \sf Z & \sf j & \sf z \\
+   \hdashline
+   \tt1 & \tt0 & \tt1 & \tt1 & 11 & \tt VT & \tt ESC & + & ; & \sf L & [ & \sf k & \{ \\
+   \hdashline
+   \tt1 & \tt1 & \tt0 & \tt0 & 12 & \tt FF & \tt FS & , & < & \sf M & \setminus & \sf l & \mid \\
+   \hdashline
+   \tt1 & \tt1 & \tt0 & \tt1 & 13 & \tt CR & \tt GS & - & = & \sf N & ] & \sf m & \} \\
+   \hdashline
+   \tt1 & \tt1 & \tt1 & \tt0 & 14 & \tt SO & \tt RS & . & > & \sf O & \text{\textasciicircum} & \sf n & \sim \\
+   \hdashline
+   \tt1 & \tt1 & \tt1 & \tt1 & 15 & \tt SI & \tt US & / & ? & \sf Q & \_ & \sf o & \tt END \\
+   \hdashline
+\end{array}
+$$
+
+## $\color{steelblue}\text{UNICODE}$
+
+- About 137 000 characters
+- Most modern and some historic writing systems
+- Mathematical symbols, punctuation, emoji, etc
+- Multiple encodings for a common set of characters
+
+### $\color{teal}\text{UNICODE Encodings}$
+
+Unicode assigns a code point (a hexidecimal string) for each character. There are several diﬀerent encodings from code points to bit strings:
+
+- UTF32 uses 32 bits for each character, encoding code points directly
+- UTF16 uses one or two 16-bit strings per code point, making it a variable length encoding
+- UTF8 uses between one and four 8-bit stings per code point, and is hence also a variable length encoding.
+- It is backwards compatible with ASCII for the original 7-bit ASCII character set
+  - UTF8 is the most common encoding. Python strings are UTF-8 encoded by default.
+
+### $\color{teal}\text{UTF-8 in Python}$
+
+```python
+>>> ord('A')    # Convert character to UTF code point
+65
+>>> chr(65)     # Convert UTF code point to character
+'A'
+```
+
+## $\color{steelblue}\text{Numbers}$
+
+### $\color{teal}\text{Binary Representation}$
+
+Binary numbers are analogous to base-$10$ notation:
+
+- Starts at position $0$, the right-most numeral
+- Position $j$ gets a multiplier of $2^j$
+- Add up all values
+
+Example, $\tt1010$, starting from position $0$:
+
+- $0 \text{ has multiplier of } 2^0 = 1$
+- $1 \text{ has multiplier of } 2^1 = 2$
+- $0 \text{ has multiplier of } 2^2 = 4$
+- $1 \text{ has multiplier of } 2^3 = 8$
+- $\text{total is } 10$
+
+### $\color{teal}\text{4-Bit Binary}$
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c:c:c:c}
+   base-10 & base-2 & base-10 & base-2 \\ \hline
+   0 & \tt0000 & 8 & \tt1000 \\
+   \hdashline
+   1 & \tt0001 & 9 & \tt1001 \\
+   \hdashline
+   2 & \tt0010 & 10 & \tt1010 \\
+   \hdashline
+   3 & \tt0011 & 11 & \tt1011 \\
+   \hdashline
+   4 & \tt0100 & 12 & \tt1100 \\
+   \hdashline
+   5 & \tt0101 & 13 & \tt1101 \\
+   \hdashline
+   6 & \tt0110 & 14 & \tt1110 \\
+   \hdashline
+   7 & \tt0111 & 15 & \tt1111
+\end{array}
+$$
+
+### $\color{teal}\text{8-Bit Binary}$
+
+Storing positive numbers $(0 ... 255)$, as 8-bit strings:
+
+$$
+\stackrel{7}{\sum_{\substack{j=0}}}
+2^j\overline{x}_j
+$$
+
+### $\color{teal}\text{Adding Binary Numbers}$
+
+Adding two 1-bit numbers:
+
+$$
+0+0=0 \\
+1+0=1 \\
+0+1=1 \\
+1+1=10
+$$
+
+### $\color{teal}\text{Bit Operations}$
+
+Given two 1-bit numbers, $\overline{x}$ and $\overline{y}$, their binary sum is a 2-bit string $\overline{z}$ where:
+
+$$
+\overline{z}_0 = \overline{x}_0 \wedge \overline{y}_0 \\[1em]
+\overline{z}_1 = \overline{x}_0 \And \overline{y}_0
+$$
+
+For $n$-bit binary numbers $\overline{x}$ and $\overline{y}$, the sum in binary $\overline{z}$ is a $n+1$-bit binary number where:
+
+$$
+\overline{z}_j = \overline{x}_j \wedge \overline{y}_j \wedge \overline{c}_j
+\\[1em]
+\overline{c}_{j+1} = (\overline{x}_j \And \overline{y}_j) \mid (\overline{x}_j \And \overline{c}_j) \mid (\overline{y}_j \And \overline{c}_j)
+$$
+
+The string $\overline{c}$ is the carry bits (take $\overline{c}_0$ to be $0$). The equation for $\overline{c}_{j+1}$ says it is 1 when $\overline{x}_j + \overline{y}_j + \overline{c}_j$ is 2 or 3.
+
+### $\color{teal}\text{Negative Numbers}$
+
+Properties of 2's complement:
+
+- For $n$ bits, can represent $-2^{n-1}$ through to $2^{n-1}-1$
+- Leftmost bit is $1$ for negative numbers
+- Addition is $\mod 2^n$
+- Positive numbers $0$ to $2^{n-1}-1$ are unchanged
+
+### $\color{teal}\text{3-Bit 2's Complement}$
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c:c:c}
+   \text{bit string} & \text{2's comp interpretation} & \text{binary interpretation} \\ \hline
+   \tt000 & 0 & 0 \\
+   \hdashline
+   \tt001 & 1 & 1 \\
+   \hdashline
+   \tt010 & 2 & 2 \\
+   \hdashline
+   \tt011 & 3 & 3 \\
+   \hdashline
+   \tt100 & -4 & 4 \\
+   \hdashline
+   \tt101 & -3 & 5 \\
+   \hdashline
+   \tt110 & -2 & 6 \\
+   \hdashline
+   \tt111 & -1 & 7
+\end{array}
+$$
+
+### $\color{teal}\text{Hexadecimal}$
+
+- Base-64 number system - number in position $j$ gets a multiplier of $16^j$.
+- Compact method for writing bit strings
+
+### $\color{teal}\text{4-Bit Hex}$
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c:c:c||c:c:c}
+   \text{symbol} & \text{bit string} & \text{base-10} & \text{symbol} & \text{bit string} & \text{base-10} \\ \hline
+   0 & \tt0000 & 0 & 8 & \tt1000 & 8 \\
+   \hdashline
+   1 & \tt0001 & 1 & 9 & \tt1001 & 9 \\
+   \hdashline
+   2 & \tt0010 & 2 & \sf A & \tt1010 & 10 \\
+   \hdashline
+   3 & \tt0011 & 3 & \sf B & \tt1011 & 11 \\
+   \hdashline
+   4 & \tt0100 & 4 & \sf C & \tt1100 & 12 \\
+   \hdashline
+   5 & \tt0101 & 5 & \sf D & \tt1101 & 13 \\
+   \hdashline
+   6 & \tt0110 & 6 & \sf E & \tt1110 & 14 \\
+   \hdashline
+   7 & \tt0111 & 7 & \sf F & \tt1111 & 15
+\end{array}
+$$
+
+### $\color{teal}\text{Interpreting Hex}$
+
+$\sf4F = 4 \rarr \tt0100,\ \sf F \rarr \tt1111 = 01001111$
+$\text{therefore,}$
+$\sf4F = \tt01001111$
+
+- Shorter than bit strings
+- One hex numeral is always exactly 4 bits
+- Easy to work with individual bits
+
+### $\color{teal}\text{Python Hex}$
+
+```python
+>>> hex(65532)                          # Hex string from integer
+'0xfffc'
+>>> "The number is {:x}".format(65532)  # Alternative method
+'The number is fffc'
+>>> 0xfffc                              # Hex literal integer
+65532
+```
+
+### $\color{teal}\text{Scientific Notation}$
+
+$$\pm a.bc\times10^e$$
+
+- $\textbf{Sign: } \quad \pm$
+- $\textbf{Significant digits: } \quad a.bc$
+- $\textbf{Exponent: } \quad e$
+- $\textbf{Base: } \quad 10$
+
+The base is always shared across the significant digits
+
+### $\color{teal}\text{Scientific Notation in Base 2}$
+
+- Significant digits are bits
+- Exponent is written in binary
+
+$$\mathtt{1.1010} \times 2^{10}$$
+
+### $\color{teal}\text{Floting Point Numbers}$
+
+Computers represent scientific notation as floating point numbers, encoding in binary:
+
+- Significant digits
+- Exponent
+- Sign (positive or negative)
+- With base 2
+
+### $\color{teal}\text{IEEE Half-Precision}$
+
+IEEE 754 floating point standard for 16 bits:
+$$\overbrace{0}^s \overbrace{10101}^e \overbrace{1010101010}^f$$
+
+- $\textbf{Sign: } \quad s$ (1-bit)
+- $\textbf{Exponent: } \quad e$ (5 bits)
+- $\textbf{Significant digits: } \quad f$ (10 bits dropping leading 1)
+
+### $\color{teal}\text{Python Numers}$
+
+Basic number types:
+
+- $\tt int$
+  - Arbitrary length integers
+  - Special base-$2^{30}$
+- $\tt float$
+  - IEEE 754 double precision
+    - 64-bit floating point
+
+```python
+>>> 9/2     # Regular division always returns float
+4.5
+>>> 9//2    # Floor division returns integer
+4
+```
+
+## $\color{steelblue}\text{Recursion}$
+
+### $\color{teal}\text{Recursive Definitions}$
+
+Factorial function on $\Bbb{N}$ defined as:
+
+$$
+n! = \stackrel{n}{\prod_{\substack{j=1}}}j
+= 1\cdot 2 \cdots (n-1) \cdot n
+$$
+
+Also $n$! recursively:
+
+$$
+n! = \begin{cases}
+   1 &: n=1 \\
+   n(n-1)! &: n>1
+\end{cases}
+$$
+
+Two main parts:
+
+- $\textbf{Base case:}$ evaluated without reference to object
+  - Required, though potentially multiple
+- $\textbf{Recursive case:}$ refer back to object definition
+  - More complex than base
+
+### $\color{teal}\text{Fibonacci Sequence}$
+
+Fibonacci sequence is classic example of recursion:
+
+$$
+f(n) = \begin{cases}
+   1 &: n=1 \\
+   1 &: n=2 \\
+   f(n-1)+f(n-2) &: n>2
+\end{cases}
+$$
+
+### $\color{teal}\text{Fibonacci in Python}$
+
+```python
+def F(n):
+   if n == 1: return 1
+   elif n == 2: return 1
+   else: return F(n-1) + F(n-2)
+```
+
+### $\color{teal}\text{Arithmetic Expression}$
+
+Programming languages often expressed as multiple types in recursion:
+
+$$
+EXPR := \begin{cases}
+   VALUE\\
+   EXPR\; \text{\textquotedblleft}+"\ VALUE\\
+   EXPR\; \text{\textquotedblleft}-"\ VALUE
+\end{cases}\\[1em]
+VALUE := \begin{cases}
+   CONSTANT\\
+   VARIABLE
+\end{cases}
+$$
+
+## $\color{steelblue}\text{Propositional Logic}$
+
+- Propositions are true or false statements
+- Logical connectives use propositions to build larger ones
+- $p$ and $q$ often represent propositions
+
+### $\color{teal}\text{Atomic and Compound Propositions}$
+
+- $\textbf{Atomic: } \quad \text{"It is raining"}$
+- $\textbf{Compound: } \quad \text{"It is raining and cloudy"}$
+
+## $\color{steelblue}\text{Logical Operators}$
+
+- $\textit{NOT, } \textbf{negates truth: } \quad \lnot$
+- $\textit{AND, } \textbf{requires both: } \quad \wedge$
+- $\textit{OR, } \textbf{allows either: } \quad \vee$
+- $\textit{XOR, } \textbf{requires either: } \quad \oplus$
+- $\textit{IF..THEN: } \quad \rarr$
+- $\textit{IF AND ONLY IF: } \quad \harr$
+
+### $\color{teal}\text{IF..THEN}$
+
+- $p \rarr q$ means $q$ must be true whenever $p$ is, regardless of $p$
+- When $p$ is false, $p \rarr q$ is always true
+- $(p \rarr q)\space =\space (\text{if } p \text{ then } q)\space =\space (p \text{ implies } q)$
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c:c:c}
+   p & q & p \rarr q \\ \hline
+   T & T & T \\
+   \hdashline
+   T & F & F \\
+   \hdashline
+   F & T & T \\
+   \hdashline
+   F & F & T
+\end{array}
+$$
+
+### $\color{teal}\text{IF AND ONLY IF}$
+
+- $p \harr q$ means both must have the same truth value
+- $(p \harr q)\space =\space ((p \rarr q)\wedge(p \rarr q))\space =\space (p \text{ if and only if } q)$
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c:c:c}
+   p & q & p \harr q \\ \hline
+   T & T & T \\
+   \hdashline
+   T & F & F \\
+   \hdashline
+   F & T & F \\
+   \hdashline
+   F & F & T
+\end{array}
+$$
