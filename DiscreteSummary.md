@@ -791,3 +791,10 @@ $$
 \end{split}
 \end{equation}
 $$
+
+### $\color{teal}\text{Formula Classification}$
+
+- $\textbf{Tautologies: } \quad$ always $T\\[1em]$
+- $\textbf{Contradictions: } \quad$ always $F\\[1em]$
+- $\textbf{Contingent formulas: } \quad T$ OR $F$ depending on variables $\\[1em]$
+- $\textbf{Satisfiable formulas: } \quad \textit{tautologies}$ OR $\textit{contingent formulas}\\[1em]$
