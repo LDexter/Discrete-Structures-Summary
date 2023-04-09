@@ -7,6 +7,7 @@
 ## Markdown Setup
 
 _Open in Visual Studio Code and install:_ [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+
 **This extension is required,** as styling will be broken in many places and GitHub does not support all the features, only some.
 
 ## Typesetting Powered by:
