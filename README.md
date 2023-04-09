@@ -1,4 +1,4 @@
-# Discrete-Functions-Summary
+# Discrete-Structures-Summary
 
 ### A markdown summary of CAB202's lecture content on discrete structures with KaTeX typesetting.
 
