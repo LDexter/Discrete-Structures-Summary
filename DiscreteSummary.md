@@ -1076,9 +1076,59 @@ Syllogisms are deductive reasoning upon sets:
 
 $$
 \begin{align}
-   \nonumber&\text{All humans are mortal. \textit{(major premise)}}\\
-   \nonumber&\text{Socrates is human. \textit{(minor premise)}}\\
+   \nonumber\text{All humans are mortal } &\textit{(major premise)}\\
+   \nonumber\text{Socrates is human } &\textit{(minor premise)}\\
    \hline
-   &\text{Socrates is mortal. \textit{(conclusion)}}
+   \text{Socrates is mortal } &\textit{(conclusion)}
 \end{align}
 $$
+
+### $\color{teal}\text{Set Theoric Syllogisms}$
+
+$$
+\begin{align}
+   \nonumber HUMANS &\subseteq MORTALS\\
+   \nonumber s &\in HUMANS\\
+   \hline
+   s &\in MORTALS
+\end{align}
+$$
+
+### $\color{teal}\text{Syllogism Types}$
+
+Abstracted to $\textit{syllogism type:}$
+
+$$
+\begin{align}
+   \nonumber A &\subseteq B\\
+   \nonumber x &\in A\\
+   \hline
+   x &\in B
+\end{align}
+$$
+
+This is $\textit{valid}$ type, so works for any $A, B, x$ provided the $\textit{premises}$ are true
+
+24 valid sylligism types in total, such as:
+
+$$
+\begin{align}
+   \nonumber\text{All trees are plants}&\quad (A\subseteq B)\\
+   \nonumber\text{Some trees are tall}&\quad (A\cap C\not =\emptyset)\\
+   \hline
+   \text{Some plants are tall}&\quad (B\cap C\not =\emptyset)
+\end{align}
+$$
+
+$\\[2em]$
+
+$$
+\begin{align}
+   \nonumber\text{All cats are mammals}&\quad (A\subseteq B\ and\ A\not =\emptyset)\\
+   \nonumber\text{All cats are carnivores}&\quad (A\subseteq C)\\
+   \hline
+   \text{Some mammals are carnivores}&\quad (B\cap C\not =\emptyset)
+\end{align}
+$$
+
+$\\[2em]$
