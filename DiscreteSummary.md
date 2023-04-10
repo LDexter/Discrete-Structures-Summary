@@ -1020,7 +1020,7 @@ Universes of manageable size may be represented as bit strings (characteristic v
 # {0, 40, 10, 20, 30}
 ```
 
-## $\color{steelblue}\text{Zermelo-Fraenkel Set Theory}$
+### $\color{teal}\text{Zermelo-Fraenkel Set Theory}$
 
 ZF set theory, seven axioms to define set behaviour:
 
@@ -1052,7 +1052,7 @@ ZF replacements from axioms 1, 3, and 5:
 
 $A'$ is the resulting set.
 
-## $\color{steelblue}\Bbb{Z}_{\ge0}\text{ From Set Theory}$
+### $\color{teal}\Bbb{Z}_{\ge0}\text{ From Set Theory}$
 
 Peano's axioms to construct set of non-negative integers:
 
@@ -1064,3 +1064,21 @@ Peano's axioms to construct set of non-negative integers:
 - $\text{\textquotedblleft}2'':=S(\text{\textquotedblleft}1'')=\text{\textquotedblleft}1''\cup\{\text{\textquotedblleft}1''\}=\{\emptyset,\{\emptyset\}\}=\{\{\},\{\{\}\}\}$
   $\vdots$
 - $S(n)=n\cup\{n\}$
+
+## $\color{steelblue}\text{Syllogisms}$
+
+Syllogisms are deductive reasoning upon sets:
+
+- Start with $\textit{premises}$ (statements), taken to be true
+- Apply valid form of argument
+- Draw conclusion
+- If $\textit{premises}$ are true, then impossible for conclusion to be false:
+
+$$
+\begin{align}
+   \nonumber&\text{All humans are mortal. \textit{(major premise)}}\\
+   \nonumber&\text{Socrates is human. \textit{(minor premise)}}\\
+   \hline
+   &\text{Socrates is mortal. \textit{(conclusion)}}
+\end{align}
+$$
