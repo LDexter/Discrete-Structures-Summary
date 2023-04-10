@@ -118,6 +118,7 @@ Python:
 
 ```python
 print(17 % 4) # Prints 1 to the console
+# 1
 ```
 
 ### $\color{teal}\text{Modulo Lemma}$
@@ -207,11 +208,11 @@ For example, one kilobit is $1024 = 2^{10}$ bits.
 ```python
 >>> import math         # Must import math library
 >>> math.log2(8)        # log2 means log base 2 and returns a float (decimal)
-3.0
+# 3.0
 >>> 2 ** 3              # ** is exponentiation
-8
+# 8
 >>> math.log2(100) / math.log2(10)  # base transformation
-2.0
+# 2.0
 ```
 
 ## $\color{steelblue}\text{Operators}$
@@ -403,9 +404,9 @@ Unicode assigns a code point (a hexidecimal string) for each character. There ar
 
 ```python
 >>> ord('A')    # Convert character to UTF code point
-65
+# 65
 >>> chr(65)     # Convert UTF code point to character
-'A'
+# 'A'
 ```
 
 ## $\color{steelblue}\text{Numbers}$
@@ -572,16 +573,20 @@ $\sf4F = \tt01001111$
 
 ```python
 >>> hex(65532)                          # Hex string from integer
-'0xfffc'
+# '0xfffc'
 >>> "The number is {:x}".format(65532)  # Alternative method
-'The number is fffc'
+# 'The number is fffc'
 >>> 0xfffc                              # Hex literal integer
-65532
+# 65532
 ```
 
 ### $\color{teal}\text{Scientific Notation}$
 
-$$\pm a.bc\times10^e$$
+$$
+\begin{align}
+   \pm a.bc&\times10^e
+\end{align}
+$$
 
 - $\textbf{Sign: } \quad \pm$
 - $\textbf{Significant digits: } \quad a.bc$
@@ -595,7 +600,11 @@ The base is always shared across the significant digits
 - Significant digits are bits
 - Exponent is written in binary
 
-$$\mathtt{1.1010} \times 2^{10}$$
+$$
+\begin{align}
+   \mathtt{1.1010} &\times 2^{10}
+\end{align}
+$$
 
 ### $\color{teal}\text{Floting Point Numbers}$
 
@@ -609,7 +618,12 @@ Computers represent scientific notation as floating point numbers, encoding in b
 ### $\color{teal}\text{IEEE Half-Precision}$
 
 IEEE 754 floating point standard for 16 bits:
-$$\overbrace{0}^s \overbrace{10101}^e \overbrace{1010101010}^f$$
+
+$$
+\begin{align}
+   \overbrace{0}^s &\overbrace{10101}^e \overbrace{1010101010}^f
+\end{align}
+$$
 
 - $\textbf{Sign: } \quad s$ (1-bit)
 - $\textbf{Exponent: } \quad e$ (5 bits)
@@ -628,9 +642,9 @@ Basic number types:
 
 ```python
 >>> 9/2     # Regular division always returns float
-4.5
+# 4.5
 >>> 9//2    # Floor division returns integer
-4
+# 4
 ```
 
 ## $\color{steelblue}\text{Recursion}$
@@ -640,17 +654,21 @@ Basic number types:
 Factorial function on $\Bbb{N}$ defined as:
 
 $$
-n! = \stackrel{n}{\prod_{\substack{j=1}}}j
-= 1\cdot 2 \cdots (n-1) \cdot n
+\begin{align}
+   n! = \stackrel{n}{\prod_{\substack{j=1}}}j
+   &= 1\cdot 2 \cdots (n-1) \cdot n
+\end{align}
 $$
 
 Also $n$! recursively:
 
 $$
-n! = \begin{cases}
-   1 &: n=1 \\
-   n(n-1)! &: n>1
-\end{cases}
+\begin{align}
+   n! &= \begin{cases}
+      1 &: n=1 \\
+      n(n-1)! &: n>1
+   \end{cases}
+\end{align}
 $$
 
 Two main parts:
@@ -665,11 +683,13 @@ Two main parts:
 Fibonacci sequence is classic example of recursion:
 
 $$
-f(n) = \begin{cases}
-   1 &: n=1 \\
-   1 &: n=2 \\
-   f(n-1)+f(n-2) &: n>2
-\end{cases}
+\begin{align}
+   f(n) &= \begin{cases}
+      1 &: n=1 \\
+      1 &: n=2 \\
+      f(n-1)+f(n-2) &: n>2
+   \end{cases}
+\end{align}
 $$
 
 ### $\color{teal}\text{Fibonacci in Python}$
@@ -802,7 +822,9 @@ $$
 ## $\color{steelblue}\text{Logical Equivalence}$
 
 $$
-   A \rarr B \equiv \lnot A \vee B
+\begin{align}
+   A \rarr B &\equiv \lnot A \vee B
+\end{align}
 $$
 
 $$A \equiv B\ \text{ is the same as stating: \textquotedblleft} A \harr B\ \text{ is a \textit{tautology}"}$$
@@ -817,3 +839,183 @@ $$
 \end{split}
 \end{equation}
 $$
+
+## $\color{steelblue}\text{Set Theory}$
+
+- $\textbf{Set: }\quad S$
+- $\textbf{In set: }\quad \in$
+- $\textbf{Not in set: }\quad \notin$
+
+  $$
+  \begin{align}
+     \nonumber\textbf{Set listing: }\\
+     SMALLPRIMES=\ &\set{1,2,3,5,7}\\[2em]
+     \nonumber\textbf{Implied pattern: }& \textit{(bad practice)}\\
+     EVENS=\ &\set{2,4,6,8,\dots}\\[2em]
+     \nonumber\textbf{Setbuilder notation: }& \text{\textquotedblleft set comprehension"}\\
+     \nonumber\text{Subset of elements, } &\text{that match a condition}\\
+     &\set{x\in S:\phi(x)}\\
+     SQUARES=\ &\set{x\in \Bbb{Z}:x=y^2 \text{ for some }y\in \Bbb{Z}}\\[2em]
+     \nonumber\textbf{Setbuilder notation: }& \text{\textquotedblleft replacement"}\\
+     \nonumber\text{Apply a theory to } &\text{each member and collect results}\\
+     &\set{f(x):x\in S}\\
+     SQUARES=\ &\set{x^2:x\in \Bbb{Z}}\\[2em]
+  \end{align}
+  $$
+
+### $\color{teal}\text{Set Equality}$
+
+$S=T$ when:
+
+- Every element $x\in S$ is in $T$
+- Every element $x\in T$ is in $S$
+- Regardless of order, repetition, and representation:
+
+$$
+\begin{align}
+   \set{1,2,3} &= \set{3,2,1}\\
+   \set{1,1,1} &= \set{1}\\
+   \set{x\in \Bbb{Z}:x^2=4} &= \set{2,-2}
+\end{align}
+$$
+
+### $\color{teal}\text{Set Size}$
+
+$$
+\begin{align}
+   |\set{1,2,3}|&=3\\
+   |\set{1,1,1}|&=1
+\end{align}
+$$
+
+### $\color{teal}\text{Sub Sets}$
+
+- $\textbf{Subset: }\quad \text{every }x\in A \text{ is in }B:\quad A\subseteq B\\[1em]$
+- $\textbf{Proper subset: }\quad A \text{ is subset of, yet not equal to }B:\quad A\subset B\\[1em]$
+- $\textbf{Equality through subsets: }\quad S\subseteq T \And T\subseteq S\\[1em]$
+
+Subset equivalence:
+
+$$
+\begin{align}
+   A\subset B&\equiv A\subseteq B \wedge A\not = B
+\end{align}
+$$
+
+The set of all subsets of a set $S$ is called the $\textit{power set}$ of $S$:
+
+$$
+\begin{align}
+   P(\set{1,2})&=\set{\empty,\set{1},\set{2},\set{1,2}}
+\end{align}
+$$
+
+### $\color{teal}\text{Set Operations}$
+
+$$
+\begin{align}
+   \nonumber\textbf{Union: }&\text{everything in either}\\
+   \nonumber\text{Must define }A\cup B &\text{ to be the smallest set, such that }A\subseteq S \And B\subseteq S\\
+   \text
+   A\cup B=\ &\set{x:x\in A\vee x\in B}\\[1em]
+   \nonumber\textbf{Intersection: }&\text{everything in \textit{both} sides}\\
+   A\cup B=\ &\set{x\in A: x\in B}\\[1em]
+   \nonumber\textbf{Difference: }&\text{remove items in one set from the other}\\
+   A\setminus B=\ &\set{x\in A: x\notin B}\\[1em]
+\end{align}
+$$
+
+### $\color{teal}\text{Universe Sets}$
+
+- The universe $U$ is the set containing all elements of concern
+- Enables definition of complements:
+
+$$
+\begin{align}
+   \overline{S} &= \set{x\in U: x\notin S}
+\end{align}
+$$
+
+Set comprehensions without specifying the set, as with $U=\Bbb{Z}^+$:
+
+$$
+\begin{align}
+   COMPOSITES &= \overline{PRIMES}\\
+   EVENS &= \set{x:x=2y}\\
+   ODDS &= \overline{EVENS}\\
+\end{align}
+$$
+
+### $\color{teal}\text{Characteristic Vectors}$
+
+Universes of manageable size may be represented as bit strings (characteristic vectors):
+
+- Let $n=|U|$
+- Number elements like so, $U=\set{e_1,e_2,\dots e_n}$
+- $XS = XS_1XS_2\dots XS_n$ where:
+  $$
+  \begin{align}
+     XS_j&=
+     \begin{cases}
+        0\quad e_j\notin S\\
+        1\quad e_j\in S
+     \end{cases}
+  \end{align}
+  $$
+  - Example: $\ U=\set{1,2,3}$ then $\ X_{\set{1,3}}=\tt101$, $\ X_{\set{2}}=\tt010$
+  - Set operations such as $\cup$ and $\cap$ become bitwise operators
+
+### $\color{teal}\text{Python Sets}$
+
+```python
+>>> S = {1,2,3}; T = {1,3,5}     # Braces define sets
+>>> S.add(4); print(S)           # Sets are mutable
+# {1, 2, 3, 4}
+>>> S.remove(4); print(S)
+# {1, 2, 3}
+
+>>> 1 in S                       # Testing membership
+# True
+>>> 4 in S
+# False
+
+>>> S.issubset({1,2,3,4,5})      # Testing subset
+# True
+>>> S <= {1,2,3,4,5}             # Alternative subset test
+# True
+
+>>> S.union(T)                   # Using union
+# {1, 2, 3, 5}
+>>> S|T                          # Alternative union
+# {1, 2, 3, 5}
+>>> S.union(T, {8,9}, {10,11})   # Multiple union
+# {1, 2, 3, 5, 8, 9, 10, 11}
+>>> someSets = [S, T, {8,9}, {10,11}]
+>>> set.union(*someSets)         # Splat operator
+# {1, 2, 3, 5, 8, 9, 10, 11}
+
+>>> S.intersection(T)            # Splat and multi-sets would also work
+# {1, 3}
+>>> S & T                        # Alternative intersection
+# {1, 3}
+
+>>> S - T                        # Testing difference
+# {2}
+
+>>> S.isdisjoint(T)              # is S & T empty?
+# False
+
+>>> len(S)                       # Size of S
+# 3
+
+# Setbuilder notation combines of comprehension and replacement:
+>>> S = {0, 2, 4, 6, 8}
+>>> def p(x): return x % 2 == 0
+...
+>>> def p(x): return x * 5
+...
+>>> { f(x) for x in S if p(x) }
+# {0, 40, 10, 20, 30}
+>>> { s * 5 for s in range(0, 10) if s % 2 == 0 }
+# {0, 40, 10, 20, 30}
+```
