@@ -1041,7 +1041,7 @@ ZF set theory, seven axioms to define set behaviour:
 7. For a set $S$, there is a set containing every possible subset of $S$
    - $\textit{Allows power sets}$
 
-## $\color{steelblue}\text{Replacements From ZF Axioms}$
+### $\color{teal}\text{Replacements From ZF Axioms}$
 
 ZF replacements from axioms 1, 3, and 5:
 
