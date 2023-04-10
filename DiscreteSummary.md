@@ -906,7 +906,7 @@ The set of all subsets of a set $S$ is called the $\textit{power set}$ of $S$:
 
 $$
 \begin{align}
-   P(\set{1,2})&=\set{\empty,\set{1},\set{2},\set{1,2}}
+   P(\set{1,2})&=\set{\emptyset,\set{1},\set{2},\set{1,2}}
 \end{align}
 $$
 
@@ -1019,3 +1019,35 @@ Universes of manageable size may be represented as bit strings (characteristic v
 >>> { s * 5 for s in range(0, 10) if s % 2 == 0 }
 # {0, 40, 10, 20, 30}
 ```
+
+## $\color{steelblue}\text{Zermelo-Fraenkel Set Theory}$
+
+ZF set theory, seven axioms to define set behaviour:
+
+1. Two sets containing same elements are equal
+   $\\[2em]$
+2. Every set S other than $\emptyset$ contains at least one element $y$, also $S$ and $y$ are disjoint
+   $\\[2em]$
+3. If $S$ is a set and $\phi(x)$ is a formula, then there is a set that contains exactly the elements of $S$ that satisfies $\phi(x)$
+   $\\[2em]$
+4. If $S_1, S_2,\dots$ are sets, then there is a set that contains all of the elements of every $S_j$
+   - $\textit{Allows unions}$
+     $\\[2em]$
+5. If $S$ is a set and $f(x)$ is a function, then there is a set that contains $f(x)$ for every $x\in S$
+   - $\textit{Allows replacements such as:}\ \set{f(x):x\in S}$
+     $\\[2em]$
+6. Given $S_0=\emptyset$ and $S_j={S_{j-1}}$, there is a set that contains every $S_j$
+   $\\[2em]$
+7. For a set $S$, there is a set containing every possible subset of $S$
+   - $\textit{Allows power sets}$
+
+## $\color{steelblue}\text{Replacements From ZF Axioms}$
+
+ZF replacements from axioms 1, 3, and 5:
+
+- Start with set $S$ and function $f(x)$
+- Use axiom 5 to obtain set $A$ containing $f(x)$ whenever $x\in S$
+- Create formula $\phi(y)$ so $x\in S$, such that $f(x)=y$
+- Use axiom 3 to obtain set $A'$ containing every $y\in A$ such that $\phi(y)$ is true
+
+$A'$ is the resulting set.
