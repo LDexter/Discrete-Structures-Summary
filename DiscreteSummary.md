@@ -762,7 +762,7 @@ $$
 ### $\color{teal}\text{IF AND ONLY IF}$
 
 - $p \harr q$ means both must have the same truth value
-- $(p \harr q)\space =\space ((p \rarr q)\wedge(p \rarr q))\space =\space (p \text{ if and only if } q)$
+- $(p \harr q)\space =\space ((p \rarr q)\wedge(q \rarr p))\space =\space (p \text{ if and only if } q)$
 
 $$
 \def\arraystretch{1.5}
