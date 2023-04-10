@@ -144,10 +144,10 @@ This is frequently used to determine divisibility or test if a number is even wh
 
 ## $\color{steelblue}\text{Exponents}$
 
-- $a^2 \text{ means } a \cdot a \cdot a$
+- $a^3 \text{ means } a \cdot a \cdot a$
 - $a^n \text{ means multiply } a \text{ together } n \text{ times}$
-- $a \text{ is called the base}$
-- $b \text{ is called the exponent}$
+  - $a \text{ is called the base}$
+  - $n \text{ is called the exponent}$
 
 ### $\color{teal}\text{Laws of Exponents}$
 
@@ -172,7 +172,7 @@ For example, one kilobit is $1024 = 2^{10}$ bits.
 - $2^3 = 8 \text{ bits in a byte}\\[1em]$
 - $2^{10} = 1024 \text{ bytes in a kilobyte}\\[1em]$
 - $2^{10} \cdot 2^3 = 2^{10+3} \text{ bits in a kilobyte}\\[1em]$
-- $32 = 5^2 \text{ or } 64 = 2 \text{ bit processors}\\[1em]$
+- $32 = 2^5 \text{ or } 64 = 2^6 \text{ bit processors}\\[1em]$
 - $256 = 2^8 = 2^{2^3} \text{ possible 8-bit characters}\\[1em]$
 
 ## $\color{steelblue}\text{Logarithms}$
@@ -229,10 +229,10 @@ An operator is a mathematical object that transforms other objects:
 ### $\color{teal}\text{Bit String Notation}$
 
 - $\textbf{String: } \quad \overline{x} \\[1em]$
-- The set of all strings of length $n$ (aka $n$-bit strings) is: $\quad \lbrace 0,1 \rbrace \\[1em]$
+- The set of all strings of length $n$ (aka $n$-bit strings) is: $\quad \lbrace 0,1 \rbrace^n \\[1em]$
 - All bit strings of all length are members of: $\quad \lbrace 0,1 \rbrace^* \\[1em]$
-- The $j$th bit in $\overline{x}$ is: $\quad \overline{x}_j \quad$ ($j$ goes from $0$ to $n - 1$) $ \\[1em]$
-- Bit strings are most often counted from the $\textit{right}$, so the furthes right is: $\quad \overline{x}_0 \\[1em]$
+- The $j$th bit in $\overline{x}$ is: $\quad \overline{x}_j \quad$ $(j$ goes from $0$ to $n - 1)\\[1em]$
+- Bit strings are most often counted from the $\textit{right}$, so the furthest right is: $\quad \overline{x}_0 \\[1em]$
 - $2^n$ possible bit strings of length $n \\[1em]$
 
 ### $\color{teal}\text{Bit Operations}$
@@ -327,7 +327,7 @@ $\text{if } \overline{x} \text{ is an \textit{n}-bit string and } \overline{y} \
 - $0$ before $1$
 - Compare strings one bit at a time, left to right
 - At first bit where strings differ, 0 goes first
-- Shorter strings are padded with empty spaces
+- Shorter strings are padded with empty spaces to the right
 
 ## $\color{steelblue}\text{ASCII}$
 
