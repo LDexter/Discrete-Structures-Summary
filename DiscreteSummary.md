@@ -1051,3 +1051,16 @@ ZF replacements from axioms 1, 3, and 5:
 - Use axiom 3 to obtain set $A'$ containing every $y\in A$ such that $\phi(y)$ is true
 
 $A'$ is the resulting set.
+
+## $\color{steelblue}\Bbb{Z}_{\ge0}\text{ From Set Theory}$
+
+Peano's axioms to construct set of non-negative integers:
+
+- What is 0
+- A successor function $S(\cdot)$ that takes a number to the next one: $\\ S(1)=2, S(2)=3\dots$
+  Define empty set, $\emptyset$, as $0$ and define a successor function by $S(n)=n\cup \{n\}$:
+- $\text{\textquotedblleft}0'':=\emptyset=\{\}$
+- $\text{\textquotedblleft}1'':=S(\text{\textquotedblleft}0'')=\text{\textquotedblleft}0''\cup\{\emptyset\}=\{\{\}\}$
+- $\text{\textquotedblleft}2'':=S(\text{\textquotedblleft}1'')=\text{\textquotedblleft}1''\cup\{\text{\textquotedblleft}1''\}=\{\emptyset,\{\emptyset\}\}=\{\{\},\{\{\}\}\}$
+  $\vdots$
+- $S(n)=n\cup\{n\}$
