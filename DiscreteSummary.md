@@ -1133,9 +1133,7 @@ $$
 
 $\\[2em]$
 
-## $\color{steelblue}\text{Proofs}$
-
-### $\color{teal}\text{Logical Implication}$
+## $\color{steelblue}\text{Logical Implication}$
 
 - From $A \wedge B$, can conclude $A$
 - From $(A\to B)\wedge A$, can conclude $B$
@@ -1179,3 +1177,5 @@ $$
 
 - Given $A\wedge B\models A$, if just $A\wedge B$ is true, then may replace with $A$
 - From $\text{\textquotedblleft it is cloudy and raining"}$, can conclude $\text{\textquotedblleft it is raining"}$
+
+## $\color{steelblue}\text{Proofs}$
