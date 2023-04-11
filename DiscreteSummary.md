@@ -1179,3 +1179,42 @@ $$
 - From $\text{\textquotedblleft it is cloudy and raining"}$, can conclude $\text{\textquotedblleft it is raining"}$
 
 ## $\color{steelblue}\text{Proofs}$
+
+Given:
+
+- Socrates is mortal or Socrates is not human
+- Socrates is human
+
+...then conclude:
+
+- Socrates is not human or Socrates is mortal
+  - $\textit{equivalence}$
+- Socrates is mortal
+  - $\textit{logical implication}$
+
+A proof is a list of formulas starting with premises and every formula must be:
+
+- Logically equivalent to a formula above
+- Logically implied by a formula above
+- The $AND$ of some formulas above
+- Logicaly implied by the $AND$
+
+A proof produces $P\models Q$, where:
+
+- $P$ is the $AND$ of all premises
+- $Q$ is the last line of the proof
+
+Proof says: assuming all premises are true, the conclusion is also true
+
+Socrates proof: $\quad(M\vee \lnot H)\wedge H\models M:\\[2em]$
+
+$$
+\begin{align}
+   \nonumber &1\quad M\vee \lnot H\quad &\text{premise}\\[0.1em]
+   \nonumber &2\quad H\quad &\text{premise}\\[0.1em]
+   \hline
+   \nonumber &3\quad \lnot H\vee M\quad &\text{equivalent to line 1 using } A\vee B\equiv B\vee A\\[0.1em]
+   \nonumber &4\quad\lnot\lnot H\quad &\text{equivalent to line 1 using } A\equiv\lnot\lnot A\\[0.1em]
+   &5\quad M\quad &\text{implication of line 3 } AND \text{ 4 using }\\\nonumber&&(A\vee B)\wedge\lnot A\models B \text{, with }A\models\lnot H\ \&\ B=M \\[0.1em]
+\end{align}
+$$
