@@ -1,6 +1,6 @@
 # Discrete-Structures-Summary
 
-### A markdown summary of CAB202's lecture content on discrete structures with KaTeX typesetting.
+### A markdown summary of CAB203's lecture content on discrete structures with KaTeX typesetting.
 
 ###### _Author not responsible for consequences caused by any innacuracies._
 
