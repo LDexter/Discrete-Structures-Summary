@@ -1132,3 +1132,50 @@ $$
 $$
 
 $\\[2em]$
+
+## $\color{steelblue}\text{Proofs}$
+
+### $\color{teal}\text{Logical Implication}$
+
+- From $A \wedge B$, can conclude $A$
+- From $(A\to B)\wedge A$, can conclude $B$
+- $\textbf{Implication: }\quad A\models B$
+
+If from $A$, can conclude $B$, then $A\models B$, then $A\to B$ is a tautology
+
+Whenever $A$ is true, so is $A\vee B$, thus $\ A\models A\vee B$:
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c:c:cc}
+   A & B & A \vee B \\ \hline
+   T & T & T & \larr\\
+   \hdashline
+   T & F & T & \larr\\
+   \hdashline
+   F & T & T & (ignore)\\
+   \hdashline
+   F & F & F
+\end{array}
+$$
+
+Given $A\models A\wedge B$, then $A\to A\vee B$ is a tautology
+
+$$
+\def\arraystretch{1.5}
+   \begin{array}{c:c:c:c}
+   A & B & A \vee B & A\to A\vee B\\ \hline
+   T & T & T & T \\
+   \hdashline
+   T & F & T & T \\
+   \hdashline
+   F & T & T & T \\
+   \hdashline
+   F & F & F & T
+\end{array}
+$$
+
+### $\color{teal}\text{Implication Substitutions}$
+
+- Given $A\wedge B\models A$, if just $A\wedge B$ is true, then may replace with $A$
+- From $\text{\textquotedblleft it is cloudy and raining"}$, can conclude $\text{\textquotedblleft it is raining"}$
