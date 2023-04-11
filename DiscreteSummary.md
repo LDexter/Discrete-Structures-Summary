@@ -1215,6 +1215,6 @@ $$
    \hline
    \nonumber &3\quad \lnot H\vee M\quad &\text{equivalent to line 1 using } A\vee B\equiv B\vee A\\[0.1em]
    \nonumber &4\quad\lnot\lnot H\quad &\text{equivalent to line 1 using } A\equiv\lnot\lnot A\\[0.1em]
-   &5\quad M\quad &\text{implication of line 3 } AND \text{ 4 using }\\\nonumber&&(A\vee B)\wedge\lnot A\models B \text{, with }A\models\lnot H\ \&\ B=M \\[0.1em]
+   &5\quad M\quad &\text{implication of line 3 } AND \text{ 4 using }\\\nonumber&&(A\vee B)\wedge\lnot A\models B \text{, with }A\models\lnot H\; AND\; B=M \\[0.1em]
 \end{align}
 $$
