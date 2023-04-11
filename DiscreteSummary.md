@@ -1430,3 +1430,27 @@ $$
    \nonumber \text{here, the universe is }&\set{T,F}
 \end{align}
 $$
+
+### $\color{teal}\text{Logic with Predicates}$
+
+All $\textit{equivalences}$ and $\textit{implications}$ work for predicates
+
+### $\color{teal}\text{Python Predicates and Quantifiers}$
+
+```python
+>>> def p(x,y):      # Any function that returns T/F to be used as predicate
+   return x >= y
+>>> p(2,1)
+# True
+
+>>> def p(x): return x >= 0
+>>> S = { -1, 0, 1 }; T = { 0, 1, 2 }
+>>> Sp = [ p(x) for x in S ]  # List of booleans
+>>> Tp = [ p(x) for x in T ]  # List of booleans
+>>> all(Tp)                   # Check for all: ALL True
+# True
+>>> all(Sp)                   # Check there  exists: at least ONE True
+# True
+>>> any(p(x) for x in S)      # Generator expression
+# True
+```
