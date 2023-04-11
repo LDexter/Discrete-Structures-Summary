@@ -1313,3 +1313,120 @@ $$
 $$
 
 ### $\color{teal}\text{Parameters in Predicates}$
+
+Given $\exists x\ p(x)$
+
+- The $x$ is filled in by the $\exists x$, so no values allowed
+- Either:
+  - there exists an $x$ that makes $p(x)$ True (making $\exists x p(x)$ True)
+  - or there does not (making it False)
+
+### $\color{teal}\text{Free Parameters}$
+
+Given $A(y)=\exists x\ p(x,y)$:
+
+- The parameter $x$ is quantified over, so no values allowed
+- The parameter $y$ is $\textit{not}$ quantified over, so values $\textit{are}$ allowed
+- Truth value of $A(y)$ depends on value of $y$
+- Here $y$ is a free parameter
+- When no free parameters, predicate is $\textit{fully quantified}$
+
+### $\color{teal}\text{Fully Quantified Truth Values}$
+
+Checking all values of fully quantified finite set:
+
+$$
+\begin{align}
+   \nonumber\forall x\in \set{0,1}(x^2=\ &x)\\
+   \hline
+   \nonumber 0^2=\ &0\\
+   \nonumber 1^2=\ &1\\
+   thus,\ True&
+\end{align}
+$$
+
+### $\color{teal}\text{Existential Truth Values}$
+
+Ensuring only one value works for existential quantifiers to be True:
+
+$$
+\begin{align}
+   \nonumber\exists x\in \set{0,1}(x^2=\ &1)\\
+   \hline
+   \nonumber 1^2=\ &1\\
+   thus,\ True&
+\end{align}
+$$
+
+Yet requiring all values to be tested to prove False:
+
+$$
+\begin{align}
+   \nonumber\exists x\in \set{0,1}(x^2=\ &2)\\
+   \hline
+   \nonumber 0^2\not=\ &2\\
+   \nonumber 1^2\not=\ &2\\
+   thus,\ True&
+\end{align}
+$$
+
+Both of these cases are the opposite when dealing with universal quantifiers
+
+### $\color{teal}\text{Existential Quantifiers Over Infinite Sets}$
+
+$$
+\begin{align}
+   \exists x\in \Bbb{Z}(x^2=-1)
+\end{align}
+$$
+
+...is False, as for every $x\in\Bbb{Z},\ x^2\ge0$, and hence $x^2\not=-1$
+
+### $\color{teal}\text{Order of Quantifiers}$
+
+Order impacts multiple quantifiers as with universe $\Bbb{Z}$:
+
+$$
+\begin{align}
+   \forall y\exists x(x+y&=0)\\
+   \nonumber \text{True, as can use }x&=-y\\[1em]
+   \exists x\forall y(x+y&=0)\\
+   \nonumber \text{False, as for any }x \text{, can use }y&=x+1,\\
+   \nonumber \text{so }x+y&=1\not=0\\[1em]
+\end{align}
+$$
+
+### $\color{teal}IF..\ THEN\text{ Quantified}$
+
+Let $h(x)$ be $x\text{ is human}$ and $m(x)$ be $x\text{ is mortal}$, then:
+
+$$
+\begin{align}
+   \forall x\in BEINGS(h(x)\to m(x))
+\end{align}
+$$
+
+### $\color{teal}\text{Necessary and Sufficient Conditions}$
+
+$$
+\begin{align}
+   \text{Given } \forall x(p(x\to q(&x))):\\
+   \nonumber p(x)\text{ is a \textit{sufficient} condition for }q(&x)\\
+   \nonumber q(x)\text{ is a \textit{necessary} condition for }p(&x)\\[1em]
+   \text{Given } \forall x(p(x\harr q(&x))):\\
+   \nonumber p(x)\text{ is \textit{necessary} and \textit{sufficient} for }q(&x)\\
+   \nonumber q(x)\text{ is \textit{necessary} and \textit{sufficient} for }p(&x)\\[1em]
+\end{align}
+$$
+
+### $\color{teal}\text{Boolean Formulas Quantified}$
+
+$$
+\begin{align}
+   \nonumber\text{given }A(x,y)\text{ is a Boolean formula with }&x\text{ and }y\text{ some propositions, then:}\\[1em]
+   A\text{ is a tautology means }\forall x,yA&(x,y)\\
+   A\text{ is a contradiction means }\forall x,y\lnot A&(x,y)\\
+   A\text{ is a contradiction means }\exists x,yA&(x,y)\\[1em]
+   \nonumber \text{here, the universe is }&\set{T,F}
+\end{align}
+$$
