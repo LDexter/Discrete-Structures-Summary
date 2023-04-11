@@ -1218,3 +1218,39 @@ $$
    &5\quad M\quad &\text{implication of line 3 } AND \text{ 4 using }\\\nonumber&&(A\vee B)\wedge\lnot A\models B \text{, with }A\models\lnot H\; AND\; B=M \\[0.1em]
 \end{align}
 $$
+
+## $\color{steelblue}\text{Predicate Logic}$
+
+### $\color{teal}\text{Parameters and Predicates}$
+
+Generalise propositions by allowing $\textit{parameters}$:
+
+$$
+\begin{align}
+   A(x)&=x \text{ is a cat }\\
+   B(x,y)&=x \text{ and } y \text{ have the same birthday}\\
+   C(x,y)&=x=y+1\\
+\end{align}
+$$
+
+- Parameters allow generic references to propositions that share a common form and meaning
+
+- Predicates are propositions with one or more variables
+
+Form complex predicates from smaller ones:
+
+- $A(x)\wedge B(x) \quad\text{ understood that }x\text{ is the same for both}\\[1em]$
+- $A(x)\vee B(y) \quad\text{ can have different parameters}\\[1em]$
+- $A(x)\to B(x)\\[1em]$
+- $A((x)\to B(y))\wedge A(x)\\[1em]$
+
+To evaluate truths, must fill parameters:
+
+- Suppose $\, A(x)$ is $x^2=1$.
+  - Then $A(1)$ is True, but $A(2)$ is False.$\\[1em]$
+- Suppose $\, A(x)$ is $x\text{ is a flower}\to x\text{ smells nice}$.
+  - Then $A(rose)$ is True, but $A(raffelesia)$ is False.$\\[1em]$
+- Suppose $\, A(x)$ is $\text{if }x\text{ is human then }x\text{ is mortal}$.
+  - Then $A(Socrates)$ is True$\\[1em]$
+
+Predicates with all variables defined, become regular propositions with truth values
