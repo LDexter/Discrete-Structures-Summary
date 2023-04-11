@@ -1254,3 +1254,62 @@ To evaluate truths, must fill parameters:
   - Then $A(Socrates)$ is True$\\[1em]$
 
 Predicates with all variables defined, become regular propositions with truth values
+
+### $\color{teal}\text{Quantifiers}$
+
+Quantifiers are symbols that refer to parameters within predicates:
+
+- $\textbf{Existential quantification, }\textit{there exists: }\quad \exists\\[1em]$
+- $\textbf{Universal quantification, }\textit{for all:}\quad \forall\\[1em]$
+
+Quantifiers allow propositions out of predicates without parameter values
+
+### $\color{teal}\text{Existential Quantification}$
+
+$$
+\begin{align}
+   \nonumber\exists x\in \Bbb{Z}(&x^2=4)\\
+   \text{there exists an }x\text{ from }\Bbb{Z}\text{ such that } &x^2=4\\[1em]
+   \nonumber\exists x\in S\ p(&x)\\
+   \text{there exists an }x\text{ in }S\text{ such that } p(&x)\text{ is True}\\[1em]
+   \nonumber\exists x\in ANIMALS(&x \text{ is a fish}) \\
+   \text{there exists an }x\text{ in }ANIMALS\text{ such that } &x\text{ is a fish}\\[1em]
+   \nonumber\exists x\in \Bbb{R}(&x\in \Bbb{Z})\\
+   \text{there exists some real number }x\text{ such that } &x\text{ is an integer}\\[1em]
+\end{align}
+$$
+
+### $\color{teal}\text{Universal Quantification}$
+
+$$
+\begin{align}
+   \nonumber\forall x\in \Bbb{Z}(&x^2)\\
+   \text{for every }x\text{ in }\Bbb{Z},\ &x^2\text{ is non-negative}\\[1em]
+   \nonumber\forall x\in S\ p(&x)\\
+   \text{for all }x\text{ from }S,\ p(&x)\text{ is True }\\[1em]
+   \nonumber\forall x\in ANIMALS(&x \text{ is a fish})\\
+   \text{for all }x\text{ in }ANIMALS,\ &x\text{ is a fish}\\[1em]
+   \nonumber\forall x\in \Bbb{Z}(&x\in \Bbb{R})\\
+   \text{all integers are }&\text{real numbers }\\[1em]
+\end{align}
+$$
+
+### $\color{teal}\text{Quantify Over Sets}$
+
+Explicit set specification, to quantify over $S$:
+
+$$
+\begin{align}
+   \forall x\in S\ p(&x)
+\end{align}
+$$
+
+Implicit set specification, to quantify over a set, $\textit{out of context}$:
+
+$$
+\begin{align}
+   \forall x\ p(&x)
+\end{align}
+$$
+
+### $\color{teal}\text{Parameters in Predicates}$
