@@ -924,16 +924,16 @@ $$
   \begin{align}
      \nonumber\textbf{Set listing: }\\
      SMALLPRIMES=\ &\set{1,2,3,5,7}\\[2em]
-     \nonumber\textbf{Implied pattern: }& \textit{(bad practice)}\\
+     \nonumber\textbf{Implied pattern: }&\textit{(bad practice)}\\
      EVENS=\ &\set{2,4,6,8,\dots}\\[2em]
-     \nonumber\textbf{Setbuilder notation: }& \text{\textquotedblleft set comprehension"}\\
-     \nonumber\text{Subset of elements, } &\text{that match a condition}\\
-     &\set{x\in S:\phi(x)}\\
-     SQUARES=\ &\set{x\in \Bbb{Z}:x=y^2 \text{ for some }y\in \Bbb{Z}}\\[2em]
-     \nonumber\textbf{Setbuilder notation: }& \text{\textquotedblleft replacement"}\\
-     \nonumber\text{Apply a theory to } &\text{each member and collect results}\\
-     &\set{f(x):x\in S}\\
-     SQUARES=\ &\set{x^2:x\in \Bbb{Z}}\\[2em]
+     \nonumber\textbf{Setbuilder notation: }&\text{\textquotedblleft set comprehension"}\\
+     \nonumber\text{Subset of elements, }&\text{that match a condition}\\
+     \set{x\in S&:\phi(x)}\\
+     SQUARES=\ \set{x\in \Bbb{Z}&:x=y^2 \text{ for some }y\in \Bbb{Z}}\\[2em]
+     \nonumber\textbf{Setbuilder notation: }&\text{\textquotedblleft replacement"}\\
+     \nonumber\text{Apply a theory to }&\text{each member and collect results}\\
+     \set{f(x)&:x\in S}\\
+     SQUARES=\ \set{x^2&:x\in \Bbb{Z}}\\[2em]
   \end{align}
   $$
 
