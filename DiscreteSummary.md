@@ -209,7 +209,7 @@ For example, one kilobit is $1024 = 2^{10}$ bits.
 ## $\color{steelblue}\text{Logarithms}$
 
 - $\text{logarithms are the \textit{inverse} of exponents}$
-- $\text{if } n=\log_a x \text{ then } a^n = x, \text{ requiring elimination}$
+- $\text{if } n=\log_a x \text{ then } a^n = x, \text{ requiring elimination}\\[1em]$
   - $\log_2(\frac{64}{4})\\[1em]$
   - $2^1=1\\[1em]$
   - $2^2=4\\[1em]$
@@ -270,6 +270,20 @@ An operator is a mathematical object that transforms other objects:
 - The $j$th bit in $\overline{x}$ is: $\quad \overline{x}_j \quad$ $(j$ goes from $0$ to $n - 1)\\[1em]$
 - Bit strings are most often counted from the $\textit{right}$, so the furthest right is: $\quad \overline{x}_0 \\[1em]$
 - $2^n$ possible bit strings of length $n \\[1em]$
+
+Number of bits required to store quantity of possible bit strings:
+
+$$
+\begin{align}
+   n = \log_2(N)
+\end{align}
+$$
+
+where:
+
+- $n$ is the number of bits required to store the bit strings
+  - $n$ must be rounded up to contain all possibilities
+- $N$ is the number of possible bit strings
 
 ### $\color{teal}\text{Bit Operations}$
 
