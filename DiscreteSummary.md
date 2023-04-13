@@ -915,6 +915,10 @@ $$
 - $\textbf{Set: }\quad S$
 - $\textbf{In set: }\quad \in$
 - $\textbf{Not in set: }\quad \notin$
+- $\textbf{Real, } \textit{any number: }\quad \Bbb R$
+- $\textbf{Integer, } \textit{only whole: }\quad \Bbb Z$
+- $\textbf{Natural}_0\textbf{, } \textit{whole non-negatives: }\quad \Bbb N_0$
+- $\textbf{Natural}_1\textbf{, } \textit{whole positives: }\quad \Bbb N_1$
 
   $$
   \begin{align}
