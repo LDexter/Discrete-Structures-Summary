@@ -156,7 +156,7 @@ This is frequently used to determine divisibility or test if a number is even wh
 - $a^{m-n} = \dfrac{a^m}{a^n}\quad (\text{when } a \not= 0) \\[1em]$
 - $a^{-n} = \dfrac{1}{a^n}\quad (\text{when } a \not= 0) \\[1em]$
 - $a^0 = 1$
-- $(a^m) = a^{m \cdot n}$
+- $(a^m)^n = a^{m \cdot n}$
 
 ### $\color{teal}\text{Exponents in Computer Science}$
 
