@@ -110,9 +110,23 @@ $\text{if } a \equiv b\ (\bmod\ n) \text{ and } c \equiv\ d\ (\bmod\ n) \text{, 
 ### $\color{teal}\text{Mod Operator}$
 
 $a \bmod n \text{ is the smallest non-negative } b \text{ such that }\quad a \equiv b\quad (\bmod\ n)$
+$a \bmod n \text{ is also the \textit{remainder} from } \dfrac{a}{n}$
 
-- $\text{Equivalently, } a \mod n \text{ is the remainder from } \dfrac{a}{n}$
-- $example: 17 \mod 4 = 1 \text{ because } 17 = 4(4)+1$
+- $\textbf{Quotient: }\quad \dfrac{a}{n}\ \text{ rounded down}\\[1em]$
+- $\textbf{Modulo: }\quad quo\cdot n+rem = a,\ \text{ where \textit{remainder} is trial and error}\\[1em]$
+
+$\text{Given }\quad 20\mod 6:$
+
+$$
+\begin{align}
+   3\cdot 6+1&=20\quad \larr \textit{wrong, is }19\\[1em]
+   3\cdot 6+2&=20\quad \larr \textit{correct}
+\end{align}
+$$
+
+- $\text{quotient: }\quad 3$
+- $\text{remainder: }\quad 2$
+- $\text{thus, }\quad 20\mod 6=2$
 
 Python:
 
