@@ -393,8 +393,10 @@ $\text{if } \overline{x} \text{ is an \textit{n}-bit string and } \overline{y} \
 
 $$
 \def\arraystretch{1.5}
-   \begin{array}{c|c|c|c|c||c:c:c:c:c:c:c:c}
-   b_7 \substack{\rarr} & b_6 \substack{\rarr} & b_5 \substack{\rarr} & \Longrightarrow & \Longrightarrow & \tt000 & \tt001 & \tt010 & \tt011 & \tt100 & \tt101 & \tt110 & \tt111 \\ \hline
+   \begin{array}{c|c|c|c||c||c:c:c:c:c:c:c:c}
+   b_7 \substack{\rarr} & b_6 \substack{\rarr} & b_5 \substack{\rarr} & \Longrightarrow & \Longrightarrow & \tt000 & \tt001 & \tt010 & \tt011 & \tt100 & \tt101 & \tt110 & \tt111 \\
+   \hline
+   \hline
    b_4 \substack{\darr} & b_3 \substack{\darr} & b_2 \substack{\darr} & b_1 \substack{\darr} & r\substack\darr c\substack\rarr & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
    \hline
    \hline
@@ -554,6 +556,23 @@ Properties of 2's complement:
 - Leftmost bit is $1$ for negative numbers
 - Addition is $\mod 2^n$
 - Positive numbers $0$ to $2^{n-1}-1$ are unchanged
+
+### $\color{teal}\text{Steps for 2's Complement}$
+
+Given $\tt{1011}$:
+
+1. $\texttt{1000}\text{ from \textit{left-most} bit as}-8\\[1em]$
+2. $\text{add up isolated bits, \textit{right-to-left}}$
+   a. $\texttt{0001}\text{ from first bit as }1$
+   b. $\texttt{0010}\text{ from second bit as }2$
+   c. $1+2=3\\[1em]$
+3. $\text{add to \textit{left-most} as:}\quad -8+3=-5\\[1em]$
+
+$$
+\begin{align}
+   \texttt{1011} &= -5
+\end{align}
+$$
 
 ### $\color{teal}\text{3-Bit 2's Complement}$
 
