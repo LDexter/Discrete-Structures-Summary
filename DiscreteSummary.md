@@ -165,12 +165,29 @@ This is frequently used to determine divisibility or test if a number is even wh
 
 ### $\color{teal}\text{Laws of Exponents}$
 
-- $(ab)^n = a^n \cdot b^n \\[1em]$
-- $a^m \cdot a^n = a^{m+n} \\[1em]$
-- $a^{m-n} = \dfrac{a^m}{a^n}\quad (\text{when } a \not= 0) \\[1em]$
-- $a^{-n} = \dfrac{1}{a^n}\quad (\text{when } a \not= 0) \\[1em]$
-- $a^0 = 1$
-- $(a^m)^n = a^{m \cdot n}$
+1. $(ab)^n = a^n \cdot b^n \\[1em]$
+2. $a^m \cdot a^n = a^{m+n} \\[1em]$
+3. $a^{m-n} = \dfrac{a^m}{a^n}\quad (\text{when } a \not= 0) \\[1em]$
+4. $a^{-n} = \dfrac{1}{a^n}\quad (\text{when } a \not= 0) \\[1em]$
+5. $a^0 = 1 \\[1em]$
+6. $(a^m)^n = a^{m \cdot n} \\[1em]$
+
+### $\color{teal}\text{Changing Base with Exponent Rules}$
+
+$\text{Given }\ 16^5, \text{ changing to }base\ 2 \text{ requires:}$
+
+1. $\text{new sub-exponent through process of elimination}$
+
+   - $2^0=1,$
+   - $2^1=1,$
+   - $2^2=4,$
+   - $2^3=8,$
+   - $2^4=16\ \larr correct, \text{ matches original }base\ 16\\[1em]$
+
+2. $\text{rule 6 to make }(2^4)^5 = 2^{4 \cdot 5}$
+
+   - $4\cdot 5=20$
+   - $16^5\text{ in }base\ 2 \text{ is: }\quad \ 2^{20}$
 
 ### $\color{teal}\text{Exponents in Computer Science}$
 
