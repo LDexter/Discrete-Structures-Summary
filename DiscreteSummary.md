@@ -128,7 +128,7 @@ $$
 - $\text{remainder: }\quad 2$
 - $\text{thus, }\quad 20\mod 6=2$
 
-Python:
+### $\color{teal}\text{Mod in Python}$
 
 ```python
 print(17 % 4) # Prints 1 to the console
@@ -209,7 +209,12 @@ For example, one kilobit is $1024 = 2^{10}$ bits.
 ## $\color{steelblue}\text{Logarithms}$
 
 - $\text{logarithms are the \textit{inverse} of exponents}$
-- $\text{if } n=\log_a x \text{ then } a^n = x$
+- $\text{if } n=\log_a x \text{ then } a^n = x, \text{ requiring elimination}$
+  - $\log_2(\frac{64}{4})\\[1em]$
+  - $2^1=1\\[1em]$
+  - $2^2=4\\[1em]$
+  - $2^3=8\\[1em]$
+  - $2^4=16=\frac{64}{4}\ \larr correct\\[1em]$
 - $\text{so } \log_a \text{ tells what exponent is needed to make } x \text{ from } a:$
   $$a^{\log_a x} = x$$
 
