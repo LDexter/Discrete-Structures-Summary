@@ -349,7 +349,7 @@ XOR is also similar to addition, yet $2$ is now condensed to $0$, like parity.
 $$
 \def\arraystretch{1.5}
    \begin{array}{c:c:c}
-   x & y & x \wedge y \\ \hline
+   x & y & x \text{\textasciicircum} y \\ \hline
    0 & 0 & 0 \\
    \hdashline
    0 & 1 & 1 \\
@@ -556,6 +556,7 @@ Properties of 2's complement:
 - Leftmost bit is $1$ for negative numbers
 - Addition is $\mod 2^n$
 - Positive numbers $0$ to $2^{n-1}-1$ are unchanged
+- 2's complement $n$-bit encoding derived from $arithmetic\ modulo\ 2^n$
 
 ### $\color{teal}\text{Steps for 2's Complement}$
 
