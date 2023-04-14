@@ -1216,15 +1216,16 @@ $\\[2em]$
 
 If from $A$, can conclude $B$, then $A\models B$, then $A\to B$ is a tautology
 
-Whenever $A$ is true, so is $A\vee B$, thus $\ A\models A\vee B$:
+Whenever $A$ is True, $A\vee B$ is True,
+thus $\ A\models A\vee B$:
 
 $$
 \def\arraystretch{1.5}
    \begin{array}{c:c:cc}
    A & B & A \vee B \\ \hline
-   T & T & T & \larr\\
+   \bf{T} & T & \bf{T} & \larr\\
    \hdashline
-   T & F & T & \larr\\
+   \bf{T} & F & \bf{T} & \larr\\
    \hdashline
    F & T & T & (ignore)\\
    \hdashline
