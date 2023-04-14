@@ -811,7 +811,7 @@ $$
 
 ### $\color{teal}\text{IF..THEN}$
 
-- $p \rarr q$ means $q$ must be true whenever $p$ is, regardless of $p$
+- $p \rarr q$ means $q$ must be True whenever $p$ is, regardless of False $p$
 - When $p$ is false, $p \rarr q$ is always true
 - $(p \rarr q)\space =\space (\text{if } p \text{ then } q)\space =\space (p \text{ implies } q)$
 
