@@ -993,7 +993,7 @@ $$
    \text
    A\cup B=\ &\set{x:x\in A\vee x\in B}\\[1em]
    \nonumber\textbf{Intersection: }&\text{everything in \textit{both} sides}\\
-   A\cup B=\ &\set{x\in A: x\in B}\\[1em]
+   A\cap B=\ &\set{x\in A: x\in B}\\[1em]
    \nonumber\textbf{Difference: }&\text{remove items in one set from the other}\\
    A\setminus B=\ &\set{x\in A: x\notin B}\\[1em]
 \end{align}
