@@ -913,8 +913,8 @@ $$
 ## $\color{steelblue}\text{Set Theory}$
 
 - $\textbf{Set: }\quad S$
-- $\textbf{In set: }\quad \in$
-- $\textbf{Not in set: }\quad \notin$
+- $\textbf{Member in set: }\quad \in$
+- $\textbf{Not member in set: }\quad \notin$
 - $\textbf{Real, } \textit{any number: }\quad \Bbb R$
 - $\textbf{Integer, } \textit{only whole: }\quad \Bbb Z$
 - $\textbf{Natural}_0\textbf{, } \textit{whole non-negatives: }\quad \Bbb N_0$
@@ -964,9 +964,10 @@ $$
 
 ### $\color{teal}\text{Sub Sets}$
 
-- $\textbf{Subset: }\quad \text{every }x\in A \text{ is in }B:\quad A\subseteq B\\[1em]$
+- $\textbf{Subset: }\quad \text{set's members are in } (\text{every }x\in A \text{ is in }B):\quad A\subseteq B\\[1em]$
 - $\textbf{Proper subset: }\quad A \text{ is subset of, yet not equal to }B:\quad A\subset B\\[1em]$
 - $\textbf{Equality through subsets: }\quad S\subseteq T \And T\subseteq S\\[1em]$
+- $\textbf{Difference to member in: }\quad \text{concerning all members }x \text{, \textit{within} set }A\\[1em]$
 
 Subset equivalence:
 
