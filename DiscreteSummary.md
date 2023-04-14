@@ -34,10 +34,6 @@ $\text{If } x, y \text{ and } z \text{ are natural numbers:}\\[1em]$
 
 8. $S(x) = 0 \text{ is always false}\\[1em]$
 
-### $\color{teal}\text{Other Axioms}$
-
-WIP
-
 ## $\color{steelblue}\text{Equivalence}$
 
 - $\textbf{Equals: } \quad =$
@@ -299,7 +295,7 @@ NOT, aka $\textit{bit flip}: \quad 0$ becomes $1$ and vice versa.
 $$
 \def\arraystretch{1.5}
    \begin{array}{c:c}
-   x & \text{\large\textasciitilde}x \\ \hline
+   x & \backsim x \\ \hline
    0 & 1 \\
    \hdashline
    1 & 0
@@ -349,7 +345,7 @@ XOR is also similar to addition, yet $2$ is now condensed to $0$, like parity.
 $$
 \def\arraystretch{1.5}
    \begin{array}{c:c:c}
-   x & y & x \text{\textasciicircum} y \\ \hline
+   x & y & x \large\text{\textasciicircum} y \\ \hline
    0 & 0 & 0 \\
    \hdashline
    0 & 1 & 1 \\
@@ -531,7 +527,7 @@ Given two 1-bit numbers, $\overline{x}$ and $\overline{y}$, their binary sum is 
 
 $$
 \begin{align}
-   \overline{z}_0 &= \overline{x}_0 \wedge \overline{y}_0 \\[1em]
+   \overline{z}_0 &= \overline{x}_0 \text{\large\textasciicircum}\ \overline{y}_0 \\[1em]
    \overline{z}_1 &= \overline{x}_0 \And \overline{y}_0
 \end{align}
 $$
@@ -540,7 +536,7 @@ For $n$-bit binary numbers $\overline{x}$ and $\overline{y}$, the sum in binary 
 
 $$
 \begin{align}
-   \overline{z}_j &= \overline{x}_j \wedge \overline{y}_j \wedge \overline{c}_j
+   \overline{z}_j &= \overline{x}_j \text{\large\textasciicircum}\ \overline{y}_j \text{\large\textasciicircum}\ \overline{c}_j
    \\[1em]
    \overline{c}_{j+1} &= (\overline{x}_j \And \overline{y}_j) \mid (\overline{x}_j \And \overline{c}_j) \mid (\overline{y}_j \And \overline{c}_j)
 \end{align}
@@ -917,10 +913,10 @@ $$
 - $\textbf{Not member in set: }\quad \notin$
 - $\textbf{Real, } \textit{any number: }\quad \Bbb R$
 - $\textbf{Integer, } \textit{only whole: }\quad \Bbb Z$
-- $\textbf{Natural}_0\textbf{, } \textit{whole non-negatives: }\quad \Bbb N_0$
-- $\textbf{Natural}_1\textbf{, } \textit{whole positives: }\quad \Bbb N_1$
+- $\textbf{Natural}\ _0\textbf{, } \textit{whole non-negatives: }\quad \Bbb N_0$
+- $\textbf{Natural}\ _1\textbf{, } \textit{whole positives: }\quad \Bbb N_1\\[2em]$
 
-  $$
+$$
   \begin{align}
      \nonumber\textbf{Set listing: }\\
      SMALLPRIMES=\ &\set{1,2,3,5,7}\\[2em]
@@ -935,7 +931,7 @@ $$
      \set{f(x)&:x\in S}\\
      SQUARES=\ \set{x^2&:x\in \Bbb{Z}}\\[2em]
   \end{align}
-  $$
+$$
 
 ### $\color{teal}\text{Set Equality}$
 
