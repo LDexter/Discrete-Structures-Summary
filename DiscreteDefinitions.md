@@ -151,7 +151,7 @@ $$
     \log_a (x \cdot y) &= \log_a x + \log_a y \\[2em]
     \log_a x^y &= y \log_a x \\[2em]
     \log_a \dfrac{1}{y} &= - \log_a y \\[2em]
-    \log_a \dfrac{x}{y} \\[2em]
+    \log_a \dfrac{x}{y} &= \log_a x - \log_a y \\[2em]
     \log_b x &= (\log_b a) \cdot \log_a x \\[2em]
 \end{align}
 $$
