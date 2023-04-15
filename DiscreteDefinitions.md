@@ -1,4 +1,4 @@
-# $\color{dodgerblue}\text{CAB203: Discrete Structures Definitions}$
+# $\color{dodgerblue}\text{Discrete Definitions}$
 
 $\textit{Author not responsible for consequences caused by any innacuracies.}$
 
@@ -34,9 +34,9 @@ $$
     \text{Mod: } &\quad \bmod\\[1em]
     \text{Implication: } &\quad \models\\[1em]
     \textit{NOT: } &\quad \lnot\\[1em]
-    \textit{AND, } &\quad \wedge\\[1em]
-    \textit{OR, } &\quad \vee\\[1em]
-    \textit{XOR, } &\quad \oplus\\[1em]
+    \textit{AND: } &\quad \wedge\\[1em]
+    \textit{OR: } &\quad \vee\\[1em]
+    \textit{XOR: } &\quad \oplus\\[1em]
     \textit{IF..THEN: } &\quad \rarr\\[1em]
     \textit{IF AND ONLY IF: } &\quad \harr\\[1em]
 \end{align}

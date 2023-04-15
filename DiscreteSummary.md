@@ -221,7 +221,7 @@ For example, one kilobit is $1024 = 2^{10}$ bits.
 - $\log_a (x \cdot y) = \log_a x + \log_a y \\[1em]$
 - $\log_a x^y = y \log_a x \\[1em]$
 - $\log_a \dfrac{1}{y} = - \log_a y \\[1em]$
-- $\log_a \dfrac{x}{y} \\[1em]$
+- $\log_a \dfrac{x}{y} = \log_a x - \log_a y \\[1em]$
 - $\log_b x = (\log_b a) \cdot \log_a x \\[1em]$
 
 ### $\color{teal}\text{Base Transformation Law}$
